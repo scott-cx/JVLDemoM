@@ -1,14 +1,14 @@
-# Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     # Scan Iac with kics
     - name: run kics Scan
-       uses: checkmarx/kics-action@v1.0 
-       with:
-         path: '.'
-         output_path: 'results.json'
+      uses: checkmarx/kics-action@v1.0 
+      with:
+        path: '.'
+        output_path: 'results.json'
     # Display the results in json format
     - name: display kics results
-       run: |
-         cat results.json
+      run: |
+        cat results.json
+
